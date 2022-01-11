@@ -1,0 +1,8 @@
+# (cd config; cp creds.example.yml creds.yml)
+prod:
+  access_key: replace_me
+  secret_key: replace_me
+
+telegram:
+    TELEGRAM_CHANNEL_ID: replace_me
+    TELEGRAM_TOKEN: replace_me

@@ -1,0 +1,29 @@
+script_options:
+  TEST_MODE: True
+  DEBUG: True
+  TELEGRAM_LOGGING: False
+
+  LOG_FILE: "trades.txt"
+
+trading_options:
+  QUANTITY: 200 # Amount of PAIR_WITH to buy with. must be >= 15.
+  MAX_COINS: 10 # Amount of different coins to hold at once.
+  CHANGE_IN_PRICE: 0.1 # % of value change.
+  TIME_DIFFERENCE: 60 # CHANGE_IN_PRICE needs to happen in X seconds.
+  RECHECK_INTERVAL: 12 # Check X amount of times for value change in TIME_DIFFERENCE
+  TAKE_PROFIT: .5 # Minimum profit % to lock in.
+  STOP_LOSS: 1 # Sell coin if -X% is reached.
+  TRADING_FEE: .075 # Trading fee %
+  TRAILING_STOP_LOSS: 0.85
+  TRAILING_TAKE_PROFIT: 0.2
+
+  PAIR_WITH: USDT # Coin to trade with.
+  CUSTOM_LIST: True # Use custom coin list.
+  TICKERS_LIST: "tickers.txt" # Coin list.
+  FIATS: # Exclude these trades
+    - EURUSDT
+    - GBPUSDT
+    - JPYUSDT
+    - USDUSDT
+    - DOWN
+    - UP
